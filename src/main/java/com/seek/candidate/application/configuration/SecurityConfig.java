@@ -27,7 +27,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
-                        //.requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
                         .requestMatchers("/login**").permitAll() // Permite acceso al endpoint de login
                         .anyRequest().authenticated()
                 )
