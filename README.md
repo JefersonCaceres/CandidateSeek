@@ -41,4 +41,7 @@ La aplicación estará disponible en http://localhost:8091/
     *    copia ese token ya que lo usaremos para poder autentificar la peticion
     *   abrimos cualquier endpoint nos vamos a la pestaña llamada Authorization
     *   en Auth type buscamos bearer token y ahi pegamos el Token de esa manera podemos usar las peticiones
-# La coleccion de postman la dejare en el proyecto, \postman aqui encontraran una coleccion con todos los endpoint 
+    
+# Documentacion
+*   La coleccion de postman la dejare en el proyecto, \postman aqui encontraran una coleccion con todos los endpoint 
+*   La documentación Swagger se puede ver en la ruta: http://localhost:8091/swagger-ui/index.html
