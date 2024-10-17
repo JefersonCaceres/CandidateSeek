@@ -1,0 +1,5 @@
+CREATE TABLE status (
+    id INT NOT NULL AUTO_INCREMENT,
+    description VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
