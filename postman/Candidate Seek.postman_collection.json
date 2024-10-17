@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "a34dd1b8-8f86-4b53-b5c6-760f7d8cb0e9",
+		"name": "Candidate Seek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21880007"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/login"
+			},
+			"response": []
+		},
+		{
+			"name": "login error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"useruser\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/login"
+			},
+			"response": []
+		},
+		{
+			"name": "save candidate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk2NjI1LCJleHAiOjE3MjkyMDAyMjV9.IIaJD9Lp4vADwhRTmk8PEqucckWiINLkAJSu4reyNAM"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": null,\r\n  \"gender\": \"M\",\r\n  \"salaryExpected\": 50000.00,\r\n  \"phone\": \"+123456789\",\r\n  \"statusId\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/candidates/save"
+			},
+			"response": []
+		},
+		{
+			"name": "save candidate error",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": null,\r\n  \"gender\": \"M\",\r\n  \"salaryExpected\": 50000.00,\r\n  \"phone\": \"+123456789\",\r\n  \"statusId\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/candidates/save"
+			},
+			"response": []
+		},
+		{
+			"name": "find by id candidate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8091/candidates/find/by/1"
+			},
+			"response": []
+		},
+		{
+			"name": "find by id candidate error",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8091/candidates/find/by/120"
+			},
+			"response": []
+		},
+		{
+			"name": "find all candidate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8091/candidates/list"
+			},
+			"response": []
+		},
+		{
+			"name": "update candidate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jane Doe\",\r\n    \"gender\": \"F\",\r\n    \"salaryExpected\": 55000,\r\n    \"phone\": \"0987654321\",\r\n    \"statusId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/candidates/update/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update candidate error",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"salaryExpected\": 55000,\r\n    \"phone\": \"0987654321\",\r\n    \"statusId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8091/candidates/update/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete candidate error",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8091/candidates/delete/130"
+			},
+			"response": []
+		},
+		{
+			"name": "delete candidate ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzI5MTk3NTIzLCJleHAiOjE3MjkyMDExMjN9.TKStoYYCGaB4nhKPFMfNu9esW3gv-qC2uiqc6QTJmfE"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8091/candidates/delete/2"
+			},
+			"response": []
+		}
+	]
+}
