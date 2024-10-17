@@ -28,6 +28,7 @@ public class CandidateServiceImpl implements CandidateServicePort {
 
     @Override
     public CandidateDto createCandidate(CandidateDto candidateDto) {
+        isValidateCandidate(candidateDto);
         if(candidateDto.getId()!=null) {
             if (candidateRepository.existsById(candidateDto.getId()))
                 throw new Errors("OrderItem already exists with id: " + candidateDto.getId());
@@ -56,6 +57,7 @@ public class CandidateServiceImpl implements CandidateServicePort {
 
     @Override
     public CandidateDto updateCandidate(Long id, CandidateDto candidateDto) {
+        isValidateCandidate(candidateDto);
         Optional<CandidateEntity> existingCandidateOptional = candidateRepository.findById(id);
 
         if (existingCandidateOptional.isPresent()) {
@@ -85,4 +87,12 @@ public class CandidateServiceImpl implements CandidateServicePort {
                 .orElseThrow(() -> new Errors("OrderItem not found by " + id));
         candidateRepository.deleteById(id);
     }
+
+    public void isValidateCandidate(CandidateDto candidateDto){
+        if(candidateDto.getName()==null || candidateDto.getName().isEmpty())
+            throw new Errors("name of candidate is required");
+        if (candidateDto.getGender().equals(null) )
+            throw new Errors("Gender of candidate is required");
+    }
+
 }

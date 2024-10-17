@@ -2,13 +2,16 @@ package com.seek.candidate.application.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.seek.candidate.domain.data.StatusEntity;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
 public class CandidateDto {
     private Long id;
+    @NotBlank(message = "name is required")
     private String name;
-    private char gender;
+    private Character gender;
     private Double salaryExpected;
     private String phone;
     private Long statusId;
@@ -18,7 +21,7 @@ public class CandidateDto {
     public CandidateDto() {
     }
 
-    public CandidateDto(Long id, String name, char gender, Double salaryExpected, String phone, Long statusId, LocalDate createdAt, LocalDate updatedAt) {
+    public CandidateDto(Long id, String name, Character gender, Double salaryExpected, String phone, Long statusId, LocalDate createdAt, LocalDate updatedAt) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -45,11 +48,11 @@ public class CandidateDto {
         this.name = name;
     }
 
-    public char getGender() {
+    public Character getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 

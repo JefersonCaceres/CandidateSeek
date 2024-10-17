@@ -15,7 +15,7 @@ public class CandidateEntity {
     private String name;
 
     @Column(name = "gender", nullable = false)
-    private char gender;
+    private Character gender;
 
     @Column(name = "salary_expected")
     private Double salaryExpected;
