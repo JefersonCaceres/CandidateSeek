@@ -18,7 +18,7 @@
 *   JPA (Java Persistence API): Para el mapeo y la interacción con la base de datos.
 *   Tomcat: Servidor web embebido.
 *   Maven: Gestión de dependencias y construcción del proyecto.
-    
+
 # Pasos para la Instalación
 1. Clona el repositorio del proyecto:
     -   git clone https://github.com/JefersonCaceres/CandidateSeek.git
@@ -41,4 +41,4 @@ La aplicación estará disponible en http://localhost:8091/
     *    copia ese token ya que lo usaremos para poder autentificar la peticion
     *   abrimos cualquier endpoint nos vamos a la pestaña llamada Authorization
     *   en Auth type buscamos bearer token y ahi pegamos el Token de esa manera podemos usar las peticiones
-# La coleccion de postman la dejare en el proyecto, \src\main\postman aqui encontraran una coleccion con todos los endpoint 
+# La coleccion de postman la dejare en el proyecto, \postman aqui encontraran una coleccion con todos los endpoint 
